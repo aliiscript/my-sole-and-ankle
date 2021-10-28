@@ -14,6 +14,8 @@ const ShoeGrid = () => {
   );
 };
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  //border: 2px solid red;
+`;
 
 export default ShoeGrid;

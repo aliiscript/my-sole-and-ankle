@@ -13,16 +13,21 @@ const SuperHeader = () => {
       <MarketingMessage>
         Free shipping on domestic orders over $75!
       </MarketingMessage>
-      <SearchInput />
-      <HelpLink href="/help">Help</HelpLink>
-      <UnstyledButton>
-        <Icon id="shopping-bag" strokeWidth={1} />
-      </UnstyledButton>
+      <SuperHeaderRightWrapper>
+        <SearchInput />
+        <HelpLink href="/help">Help</HelpLink>
+        <UnstyledButton>
+          <Icon id="shopping-bag" strokeWidth={1} />
+        </UnstyledButton>
+      </SuperHeaderRightWrapper>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
   font-size: 0.875rem;
   color: ${COLORS.gray[300]};
   background-color: ${COLORS.gray[900]};
@@ -30,6 +35,12 @@ const Wrapper = styled.div`
 
 const MarketingMessage = styled.span`
   color: ${COLORS.white};
+`;
+
+const SuperHeaderRightWrapper = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  width: 350px;
 `;
 
 const HelpLink = styled.a`
