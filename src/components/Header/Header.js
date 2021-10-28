@@ -39,7 +39,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 64px;
   flex: 1;
 `;
 

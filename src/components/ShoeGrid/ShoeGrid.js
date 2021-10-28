@@ -7,15 +7,27 @@ import ShoeCard from '../ShoeCard';
 const ShoeGrid = () => {
   return (
     <Wrapper>
-      {SHOES.map((shoe) => (
-        <ShoeCard key={shoe.slug} {...shoe} />
-      ))}
+      
+        {SHOES.map((shoe) => (
+          <ShoeWrapper key={shoe.slug}>
+            <ShoeCard {...shoe} />
+          </ShoeWrapper>
+        ))}
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  //border: 2px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  margin: -16px;
+`;
+
+const ShoeWrapper = styled.div`
+  min-width: 275px;
+  flex: 1;
+  margin: 16px;
 `;
 
 export default ShoeGrid;
